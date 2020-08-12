@@ -10,7 +10,8 @@ public class MultiplesOf implements Predicate {
 
 	@Override
 	public boolean isSatisfiedBy(int a) {
-		return a % val == 0;
+		// TODO
+		return false;
 	}
 
 }
