@@ -1,7 +1,5 @@
 package jp.co.worksap.ate.bootcamp.java1000.polymorphism;
 
-import java.util.stream.IntStream;
-
 /**
  *
  * @version 1.0
@@ -31,23 +29,13 @@ public final class PolymorphismExercise {
 
 	public void execute(String[] args) {
 		Predicate pred = parseArgs(args);
-		IntStream.rangeClosed(1, 30)
-				 .filter(pred::isSatisfiedBy)
-				 .forEach(System.out::println);
-	}
-	
-	// Streamを使わない実装はこんな感じ。
-	// 多分こっちを意図しているはず。
-	public void executeUnderJava8(String[] args) {
-		Predicate pred = parseArgs(args);
-		for(int i = 1; i <= 30; i++) {
-			if(pred.isSatisfiedBy(i)) {
-				System.out.println(i);
-			}
+		for (int i = 1; i <= 30; i++) {
+			// TODO
 		}
 	}
 
 	private static Predicate parseArgs(String[] args) {
+		// TODO 必要に応じて、このメソッドにも処理を追加すること
 		if (args == null || args.length < 1) {
 			return new Otherwise();
 		}
@@ -56,9 +44,6 @@ public final class PolymorphismExercise {
 		}
 		if (args[0].equals("contains3")) {
 			return new Contains(3);
-		}
-		if (args[0].equals("7Ate9")) {
-			return new OtherThan(9);
 		}
 		return new Otherwise();
 	}
