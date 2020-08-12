@@ -10,8 +10,8 @@ public class Contains implements Predicate {
 
 	@Override
 	public boolean isSatisfiedBy(int a) {
-		// TODO
-		return false;
+		String target = String.valueOf(a);
+		return target.contains(val);
 	}
 
 }

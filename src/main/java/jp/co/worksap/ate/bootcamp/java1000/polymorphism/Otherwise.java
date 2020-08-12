@@ -4,8 +4,7 @@ public class Otherwise implements Predicate {
 
 	@Override
 	public boolean isSatisfiedBy(int a) {
-		// TODO
-		return false;
+		return true;
 	}
 
 }
